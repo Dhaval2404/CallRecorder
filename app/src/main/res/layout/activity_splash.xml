@@ -21,7 +21,7 @@
             android:padding="36dp"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/baseline_mic_24"
-            app:tint="@color/color_splash_logo"
+            app:tint="@color/color_splash_logo" />
 
     </FrameLayout>
 
