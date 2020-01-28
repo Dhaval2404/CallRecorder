@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+apply from: '../../android_commons.gradle'
+apply from: '../../android_test_dependencies.gradle'
+apply plugin: 'kotlin-kapt'
+
+android {
+
+    dataBinding {
+        enabled true
+    }
+
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':base')
+
+    implementation Libs.core_ktx
+    implementation Libs.material
+    implementation Libs.recyclerview
+    implementation Libs.viewpager2
+    implementation Libs.constraintlayout
+
+    implementation Libs.tedpermission
+    implementation Libs.circleindicator
+
+    implementation Libs.koin_android
+    implementation Libs.koin_androidx_viewmodel
+}

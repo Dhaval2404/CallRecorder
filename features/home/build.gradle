@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+apply from: '../../android_commons.gradle'
+apply from: '../../android_test_dependencies.gradle'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs"
+
+android {
+
+    dataBinding {
+        enabled true
+    }
+
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':base')
+    implementation project(':features:setting')
+    implementation project(':features:callrecord')
+
+    implementation Libs.core_ktx
+    implementation Libs.material
+    implementation Libs.recyclerview
+    implementation Libs.constraintlayout
+
+    // Kotlin
+    def nav_version = "2.2.0"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    implementation Libs.fragment
+    implementation Libs.fragment_ktx
+
+    implementation Libs.glide
+    implementation Libs.lottie
+
+    implementation Libs.koin_android
+    implementation Libs.koin_androidx_viewmodel
+
+    implementation Libs.kotlinx_coroutines_android
+}

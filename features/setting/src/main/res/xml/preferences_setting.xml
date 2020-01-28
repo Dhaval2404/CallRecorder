@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.preference.PreferenceCategory
+        android:title="Display &amp; Language"
+        app:iconSpaceReserved="false">
+
+        <androidx.preference.SwitchPreferenceCompat
+            android:summary="Turn background colors dark"
+            android:title="Dark Theme"
+            app:iconSpaceReserved="false"
+            app:key="setting.dark_theme" />
+
+        <androidx.preference.ListPreference
+            android:defaultValue="en"
+            android:enabled="false"
+            android:entries="@array/app_language"
+            android:entryValues="@array/app_language_value"
+            android:key="@string/key_app_language"
+            android:summary="%s"
+            android:title="Language"
+            app:iconSpaceReserved="false" />
+
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory
+        android:title="Storage &amp; Backup"
+        app:iconSpaceReserved="false">
+
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="@string/key_call_recording"
+            android:summaryOn="Call recording is enabled"
+            android:title="Record Calls"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false"
+            app:key="setting.dark_theme"
+            app:summaryOff="Call recording is disabled" />
+
+        <androidx.preference.Preference
+            android:persistent="false"
+            android:summary="/sdcard/CallRecorder"
+            android:title="Recording Path"
+            app:iconSpaceReserved="false" />
+
+        <androidx.preference.Preference
+            android:enabled="false"
+            android:summary="Connect google drive to backup recordings"
+            android:title="Google Drive"
+            app:iconSpaceReserved="false" />
+
+        <androidx.preference.Preference
+            android:enabled="false"
+            android:summary="Connect dropbox to backup recordings"
+            android:title="Dropbox"
+            app:iconSpaceReserved="false" />
+
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory
+        android:title="About"
+        app:iconSpaceReserved="false">
+
+        <androidx.preference.Preference
+            android:summary="v1.0"
+            android:title="App Version"
+            app:iconSpaceReserved="false"
+            app:key="@string/key_app_version" />
+
+        <androidx.preference.Preference
+            android:key="@string/key_share_app"
+            android:summary="Share call recorder app"
+            android:title="Share"
+            app:iconSpaceReserved="false" />
+
+        <androidx.preference.Preference
+            android:key="@string/key_open_source_licences"
+            android:summary="License details for open source software"
+            android:title="Open source licences"
+            app:iconSpaceReserved="false" />
+
+        <androidx.preference.Preference
+            android:key="@string/key_privacy_policy"
+            android:title="Privacy Policy"
+            app:iconSpaceReserved="false" />
+
+        <androidx.preference.Preference
+            android:key="@string/key_terms_of_use"
+            android:title="Terms of Service"
+            app:iconSpaceReserved="false" />
+
+    </androidx.preference.PreferenceCategory>
+
+</PreferenceScreen>

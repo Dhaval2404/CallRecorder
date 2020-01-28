@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/setting"
+    app:startDestination="@id/fragment_setting">
+
+    <fragment
+        android:id="@+id/fragment_setting"
+        android:name="com.github.dhaval2404.callrecorder.setting.SettingFragment"
+        android:label="Setting" />
+
+</navigation>

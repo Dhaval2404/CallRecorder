@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inbox">
+
+    <fragment
+        android:id="@+id/inbox"
+        android:name="com.github.dhaval2404.callrecorder.home.screen.inbox.InboxFragment"
+        android:label="Inbox"
+        tools:layout="@layout/fragment_inbox" />
+
+    <fragment
+        android:id="@+id/favourite"
+        android:name="com.github.dhaval2404.callrecorder.home.screen.favourite.FavouriteFragment"
+        android:label="Favourite"
+        tools:layout="@layout/fragment_favourite" />
+
+    <fragment
+        android:id="@+id/setting"
+        android:name="com.github.dhaval2404.callrecorder.setting.SettingFragment"
+        android:label="Setting" />
+
+
+</navigation>

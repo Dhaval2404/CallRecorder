@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_favourite"
+        android:icon="@drawable/outline_favorite_border_24"
+        android:title="@string/action_favourite"
+        app:iconTint="@color/colorAccent"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_make_call"
+        android:title="@string/action_make_a_call"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_send_sms"
+        android:title="@string/action_send_message"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_delete"
+        android:title="@string/action_delete_recording"
+        app:showAsAction="never" />
+
+</menu>

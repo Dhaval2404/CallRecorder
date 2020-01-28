@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/inbox"
+        android:icon="@drawable/baseline_phone_24"
+        android:title="Inbox" />
+
+    <item
+        android:id="@+id/favourite"
+        android:icon="@drawable/outline_favorite_24"
+        android:title="Favourite" />
+
+    <item
+        android:id="@+id/setting"
+        android:icon="@drawable/ic_settings"
+        android:title="Setting" />
+
+</menu>

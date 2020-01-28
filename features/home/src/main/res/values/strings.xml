@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">home</string>
+    <string name="hint_search"><![CDATA[Search Contacts & Notes]]></string>
+    <string name="message_favourite_marked">Recording is marked as favourite</string>
+    <string name="message_favourite_removed">Recording is removed from favourites</string>
+
+    <string name="message_recording_removed">Recording is deleted from app</string>
+
+    <string name="title_delete_recording">Delete</string>
+    <string name="message_delete_recording">Are you sure you want to delete this recording</string>
+    <string name="action_yes">Yes</string>
+    <string name="action_no">No</string>
+    <string name="action_favourite">Favourite</string>
+    <string name="action_show_note">Show Note</string>
+    <string name="action_make_a_call">Make a call</string>
+    <string name="action_send_message">Send a message</string>
+    <string name="action_delete_recording">Delete recording</string>
+
+
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ea9abb</color>
+    <color name="colorPrimaryDark">#ea9abb</color>
+    <color name="colorAccent">#be8abf</color>
+
+    <color name="color_status_bar">@color/white</color>
+    <color name="color_navigation_bar">@color/white</color>
+
+</resources>

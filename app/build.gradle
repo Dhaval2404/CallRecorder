@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+apply from: '../android_commons.gradle'
+apply from: '../android_test_dependencies.gradle'
+apply plugin: 'com.google.android.gms.oss-licenses-plugin'
+
+android {
+
+    defaultConfig {
+        applicationId "com.github.dhaval2404.callrecorder"
+        archivesBaseName = 'CallRecorder'
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+            versionNameSuffix ".debug"
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.resValue "string", "versionName", variant.versionName
+        variant.outputs.all {
+            outputFileName = archivesBaseName
+            outputFileName += "-v" + variant.versionName + "-" + new Date().format('Mddyyyy')
+            outputFileName += ".apk"
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':base')
+
+    implementation project(':features:permission')
+    implementation project(':features:home')
+    implementation project(':features:callrecord')
+    implementation project(':features:setting')
+
+    implementation Libs.core_ktx
+    implementation Libs.constraintlayout
+    implementation Libs.material
+    implementation Libs.stetho
+
+    implementation Libs.koin_android
+    implementation Libs.koin_androidx_viewmodel
+
+}

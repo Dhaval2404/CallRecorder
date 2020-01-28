@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.github.dhaval2404.callrecorder.permission.permission_request.PermissionViewModel" />
+
+        <variable
+            name="permission"
+            type="com.github.dhaval2404.callrecorder.permission.permission_request.Permission" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/permission_icon_bg"
+            android:padding="24dp"
+            android:scaleType="fitXY"
+            app:imgSrc="@{permission.icon}"
+            app:tint="@color/white"
+            tools:src="@drawable/outline_call_24" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="@{permission.title}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
+            tools:text="Microphone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="48dp"
+            android:gravity="center"
+            android:text="@{permission.description}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="normal"
+            tools:text="Record Audio permission needed to access mic to record incoming or outgoing calls." />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAllowPermission"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="12dp"
+            android:onClick="@{()->viewModel.checkPermission(permission)}"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="Allow Permission"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textStyle="bold"
+            app:cornerRadius="6dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/skipPermission"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="9"
+            android:onClick="@{()->viewModel.skipPermission()}"
+            android:text="Skip"
+            android:visibility="@{permission.mandatory ? View.GONE : View.VISIBLE, default=gone}"
+            app:cornerRadius="6dp"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+</layout>

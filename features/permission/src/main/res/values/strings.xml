@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">permission</string>
+
+
+    <string name="title_permission_record_audio">Microphone</string>
+    <string name="title_permission_external_storage">External Storage</string>
+    <string name="title_permission_contacts">Contacts</string>
+    <string name="title_permission_phone">Phone State</string>
+    <string name="title_permission_call_log">Call Log</string>
+    <string name="title_permission_call_screening">Call Screening</string>
+    <string name="message_permission_record_audio">Microphone permission needs to access mic to record incoming or outgoing calls.</string>
+    <string name="message_permission_external_storage">External Storage permission needs to store/play recorded audio file.</string>
+    <string name="message_permission_phone">Phone State permission needs to intercept incoming and outgoing call to record audio.</string>
+    <string name="message_permission_contact">Contacts permissions needs to access your contact book to show contact name instead of contact number.</string>
+    <string name="message_permission_call_log">Call Log permission required to identify caller at the time to recording the call.</string>
+    <string name="message_permission_call_screening">Call Screening permission required to identify caller at the time to recording the call.</string>
+
+</resources>

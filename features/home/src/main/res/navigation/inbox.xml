@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/inbox"
+    app:startDestination="@id/fragment_inbox">
+
+    <fragment
+        android:id="@+id/fragment_inbox"
+        android:name="com.github.dhaval2404.callrecorder.home.screen.inbox.InboxFragment"
+        android:label="Inbox"
+        tools:layout="@layout/fragment_inbox" />
+
+</navigation>
